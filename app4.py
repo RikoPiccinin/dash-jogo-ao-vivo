@@ -4,6 +4,8 @@ import pandas as pd
 import webbrowser
 import threading
 
+import os
+
 # Inicializa app
 app = dash.Dash(__name__)
 
@@ -161,10 +163,14 @@ def atualizar_tabela(*args):
 def download_csv(n_clicks):
     return dcc.send_data_frame(dados.to_csv, "estatisticas_jogo.csv", index=False, sep=";")
 
-# Abre navegador automaticamente
+
 if __name__ == "__main__":
     def abrir_navegador():
-        webbrowser.open_new("http://127.0.0.1:8050/")
+        # Só abre no localhost se estiver rodando local
+        if "PORT" not in os.environ:
+            import webbrowser, threading
+            threading.Timer(1, lambda: webbrowser.open_new("http://127.0.0.1:8050/")).start()
 
-    threading.Timer(1, abrir_navegador).start()
-    app.run(debug=False)
+    # Porta do Render
+    port = int(os.environ.get("PORT", 8050))
+    app.run(debug=False, host="0.0.0.0", port=port)
