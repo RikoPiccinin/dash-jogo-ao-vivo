@@ -65,7 +65,11 @@ app.layout = html.Div([
             html.Button("Cruzamento na Área", id="btn-cruzamento", n_clicks=0, style={**botao_estilo,"background": "#28a745", "color": "white"}),
             html.Button("Lançamento Profundidade", id="btn-lancamento", n_clicks=0, style={**botao_estilo,"background": "#28a745", "color": "white"}),
             html.Button("Virada de Jogo", id="btn-virada", n_clicks=0, style={**botao_estilo,"background": "#28a745", "color": "white"})
-        ], style={"display": "flex", "flex-wrap": "wrap", "gap": "10px"})
+        ], style={"display": "flex",
+                    "justifyContent": "center",   # centraliza na horizontal
+                    "alignItems": "center",       # centraliza na vertical
+                    "flexWrap": "wrap",           # quebra linha se faltar espaço
+                    "marginTop": "20px"})
     ]),
 
     # Grupo Defesa
@@ -75,7 +79,11 @@ app.layout = html.Div([
             html.Button("Defesas Goleiro", id="btn-defesas", n_clicks=0, style={**botao_estilo,"background": "#007bff", "color": "white"}),
             html.Button("Desarmes", id="btn-desarmes", n_clicks=0, style={**botao_estilo,"background": "#007bff", "color": "white"}),
             html.Button("Posse de Bola", id="btn-posse", n_clicks=0, style={**botao_estilo,"background": "#007bff", "color": "white"})
-        ], style={"display": "flex", "flex-wrap": "wrap", "gap": "10px"})
+        ], style={"display": "flex",
+                    "justifyContent": "center",   # centraliza na horizontal
+                    "alignItems": "center",       # centraliza na vertical
+                    "flexWrap": "wrap",           # quebra linha se faltar espaço
+                    "marginTop": "20px"})
     ]),
 
     # Grupo Disputa
@@ -85,7 +93,11 @@ app.layout = html.Div([
             html.Button("Passes Certos", id="btn-passes", n_clicks=0, style={**botao_estilo,"background": "#fd7e14", "color": "white"}),
             html.Button("Passes Errados", id="btn-passes-errados", n_clicks=0, style={**botao_estilo,"background": "#d10b0b", "color": "white"}),
             html.Button("Faltas Cometidas", id="btn-faltas", n_clicks=0, style={**botao_estilo,"background": "#fd7e14", "color": "white"})
-        ], style={"display": "flex", "flex-wrap": "wrap", "gap": "10px"})
+        ], style={"display": "flex",
+                    "justifyContent": "center",   # centraliza na horizontal
+                    "alignItems": "center",       # centraliza na vertical
+                    "flexWrap": "wrap",           # quebra linha se faltar espaço
+                    "marginTop": "20px"})
     ]),
 
     # Grupo Disciplina
@@ -94,7 +106,11 @@ app.layout = html.Div([
         html.Div([
             html.Button("Cartão Amarelo", id="btn-amarelo", n_clicks=0, style={**botao_estilo,"background": "#ffc107", "color": "black"}),
             html.Button("Cartão Vermelho", id="btn-vermelho", n_clicks=0, style={**botao_estilo,"background": "#dc3545", "color": "white"})
-        ], style={"display": "flex", "flex-wrap": "wrap", "gap": "10px"})
+        ], style={"display": "flex",
+                    "justifyContent": "center",   # centraliza na horizontal
+                    "alignItems": "center",       # centraliza na vertical
+                    "flexWrap": "wrap",           # quebra linha se faltar espaço
+                    "marginTop": "20px"})
     ]),
 
     # Tabela
